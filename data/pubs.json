@@ -52,7 +52,7 @@
   "arxiv": "https://arxiv.org/abs/2512.06183",
   "code": "",
   "abs": "High-resolution highway traffic state information is essential for Intelligent Transportation Systems, but typical traffic data acquired from loop detectors and probe vehicles are often too sparse and noisy to capture the detailed dynamics of traffic flow. We propose PMA-Diffusion, a physics-guided mask-aware diffusion framework that reconstructs unobserved highway speed fields from sparse, incomplete observations. Our approach trains a diffusion prior directly on sparsely observed speed fields using two mask-aware training strategies: Single-Mask and Double-Mask. At the inference phase, the physics-guided posterior sampler alternates reverse-diffusion updates, observation projection, and physics-guided projection based on adaptive anisotropic smoothing to reconstruct the missing speed fields. The proposed framework is tested on the I-24 MOTION dataset with varying visibility ratios. Even under severe sparsity, with only 5% visibility, PMA-Diffusion outperforms other baselines across three reconstruction error metrics. Furthermore, PMA-diffusion trained with sparse observation nearly matches the performance of the baseline model trained on fully observed speed fields. The results indicate that combining mask-aware diffusion priors with a physics-guided posterior sampler provides a reliable and flexible solution for traffic state estimation under realistic sensing sparsity.",
-  "bib": "@article{liu2026pma,\n  author = {Liu, Lindong and Jin, Zhixiong and Choi, Seongjin},\n  title = {PMA-Diffusion: A Physics-guided Mask-aware Diffusion Framework for Traffic State Estimation from Sparse Observations},\n  journal = {Transportation Research Part C: Emerging Technologies},\n  note = {In press},\n  year = {2026},\n  eprint = {2512.06183},\n  archivePrefix = {arXiv}\n}"
+  "bib": "@article{liu2026pma,\n  author = {Liu, Lindong and Jin, Zhixiong and Choi, Seongjin},\n  title = {PMA-Diffusion: A Physics-guided Mask-aware Diffusion Framework for Traffic State Estimation from Sparse Observations},\n  journal = {Transportation Research Part C: Emerging Technologies},\n  volume = {190},\n  pages = {105801},\n  year = {2026},\n  doi = {10.1016/j.trc.2026.105801}\n}"
  },
  {
   "id": "ryu2026multi",
@@ -151,16 +151,16 @@
   "type": "journal",
   "t": "TrajFlow: A Generative Framework for Occupancy Density Estimation Using Normalizing Flows",
   "a": "Kosieradzki, M., <b>Choi, S.</b>",
-  "v": "<em>Artificial Intelligence for Transportation</em>",
-  "press": true,
+  "v": "<em>Artificial Intelligence for Transportation</em>, 7, 100076",
+  "press": false,
   "topics": [
    "Generative AI"
   ],
-  "doi": "",
+  "doi": "https://doi.org/10.1016/j.ait.2026.100076",
   "arxiv": "https://arxiv.org/abs/2501.14266",
   "code": "",
   "abs": "For intelligent transportation systems and autonomous vehicles to operate safely and efficiently, they must reliably predict the future motion and trajectory of surrounding agents within complex traffic environments. At the same time, the motion of these agents is inherently uncertain, making accurate prediction difficult. In this paper, we propose TrajFlow, a generative framework for estimating the occupancy density of dynamic agents. Our framework utilizes a causal encoder to extract semantically meaningful embeddings of the observed trajectory, as well as a normalizing flow to decode these embeddings and determine the most likely future location of an agent at some time point in the future. Our formulation differs from existing approaches because we model the marginal distribution of spatial locations instead of the joint distribution of unobserved trajectories. The advantages of a marginal formulation are numerous. First, we demonstrate that the marginal formulation produces higher accuracy on challenging trajectory forecasting benchmarks. Second, the marginal formulation allows for fully continuous sampling of future locations. Finally, marginal densities are better suited for downstream tasks as they allow for the computation of per-agent motion trajectories and occupancy grids, the two most commonly used representations for motion forecasting. We present a novel architecture based entirely on neural differential equations as an implementation of this framework and provide ablations to demonstrate the advantages of a continuous implementation over a more traditional discrete neural network based approach. The code is available at https://github.com/UMN-Choi-Lab/TrajFlow.",
-  "bib": "@misc{kosieradzki2026trajflow,\n  author = {Kosieradzki, Mitch and Choi, Seongjin},\n  title = {TrajFlow: A Generative Framework for Occupancy Density Estimation Using Normalizing Flows},\n  note = {Transportation Research Board 105th Annual Meeting},\n  year = {2025},\n  eprint = {2501.14266},\n  archivePrefix = {arXiv}\n}"
+  "bib": "@article{kosieradzki2026trajflow,\n  author = {Kosieradzki, Mitch and Choi, Seongjin},\n  title = {TrajFlow: A Generative Framework for Occupancy Density Estimation Using Normalizing Flows},\n  journal = {Artificial Intelligence for Transportation},\n  volume = {7},\n  pages = {100076},\n  year = {2026},\n  doi = {10.1016/j.ait.2026.100076}\n}"
  },
  {
   "id": "choi2025gentle",
@@ -335,16 +335,16 @@
   "type": "journal",
   "t": "Weaver: Kronecker Product Approximations of Spatiotemporal Attention for Traffic Network Forecasting",
   "a": "Cheong, C., Davis, G., <b>Choi, S.</b>",
-  "v": "<em>Transportation Research Part C: Emerging Technologies</em>",
-  "press": true,
+  "v": "<em>Transportation Research Part C: Emerging Technologies</em>, 191, 105825",
+  "press": false,
   "topics": [
    "Forecasting & estimation"
   ],
-  "doi": "",
+  "doi": "https://doi.org/10.1016/j.trc.2026.105825",
   "arxiv": "https://arxiv.org/abs/2511.08888",
   "code": "",
   "abs": "Spatiotemporal forecasting on transportation networks is a complex task that requires understanding how traffic nodes interact within a dynamic, evolving system dictated by traffic flow dynamics and social behavioral patterns. The importance of transportation networks and ITS for modern mobility and commerce necessitates forecasting models that are not only accurate but also interpretable, efficient, and robust under structural or temporal perturbations. Recent approaches, particularly Transformer-based architectures, have improved predictive performance but often at the cost of high computational overhead and diminished architectural interpretability. In this work, we introduce Weaver, a novel attention-based model that applies Kronecker product approximations (KPA) to decompose the PN X PN spatiotemporal attention of O(P^2N^2) complexity into local P X P temporal and N X N spatial attention maps. This Kronecker attention map enables our Parallel-Kronecker Matrix-Vector product (P2-KMV) for efficient spatiotemporal message passing with O(P^2N + N^2P) complexity. To capture real-world traffic dynamics, we address the importance of negative edges in modeling traffic behavior by introducing Valence Attention using the continuous Tanimoto coefficient (CTC), which provides properties conducive to precise latent graph generation and training stability. To fully utilize the model's learning capacity, we introduce the Traffic Phase Dictionary for self-conditioning. Evaluations on PEMS-BAY and METR-LA show that Weaver achieves competitive performance across model categories while training more efficiently.",
-  "bib": "@misc{cheong2024weaver,\n  author = {Cheong, Christopher and Davis, Gary and Choi, Seongjin},\n  title = {Weaver: A Spatio-Temporal Deep Learning Model Architecture Based on the Mixed Kronecker Matrix-Vector Identity},\n  note = {Under review, Transportation Research Part C},\n  eprint = {2511.08888},\n  archivePrefix = {arXiv},\n  year = {2024}\n}"
+  "bib": "@article{cheong2024weaver,\n  author = {Cheong, Christopher H. and Davis, Gary A. and Choi, Seongjin},\n  title = {Weaver: Kronecker Product Approximations of Spatiotemporal Attention for Traffic Network Forecasting},\n  journal = {Transportation Research Part C: Emerging Technologies},\n  volume = {191},\n  pages = {105825},\n  year = {2026},\n  doi = {10.1016/j.trc.2026.105825}\n}"
  },
  {
   "id": "choi2023optimal",
